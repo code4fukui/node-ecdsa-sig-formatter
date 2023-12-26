@@ -1,5 +1,3 @@
-'use strict';
-
 function getParamSize(keySize) {
 	var result = ((keySize / 8) | 0) + (keySize % 8 === 0 ? 0 : 1);
 	return result;
@@ -20,4 +18,4 @@ function getParamBytesForAlg(alg) {
 	throw new Error('Unknown algorithm "' + alg + '"');
 }
 
-module.exports = getParamBytesForAlg;
+export default getParamBytesForAlg;

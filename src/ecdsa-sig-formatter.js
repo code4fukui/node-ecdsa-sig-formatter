@@ -1,8 +1,8 @@
-'use strict';
+import { Buffer } from "https://taisukef.github.io/buffer/Buffer.js";
+//var Buffer = require('safe-buffer').Buffer;
 
-var Buffer = require('safe-buffer').Buffer;
-
-var getParamBytesForAlg = require('./param-bytes-for-alg');
+//var getParamBytesForAlg = require('./param-bytes-for-alg');
+import getParamBytesForAlg from "./param-bytes-for-alg.js";
 
 var MAX_OCTET = 0x80,
 	CLASS_UNIVERSAL = 0,
@@ -181,7 +181,7 @@ function joseToDer(signature, alg) {
 	return dst;
 }
 
-module.exports = {
+export default {
 	derToJose: derToJose,
 	joseToDer: joseToDer
 };
